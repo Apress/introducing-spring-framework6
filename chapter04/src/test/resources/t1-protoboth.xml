@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+  <bean id="producer" class="c04.Producer"
+        scope="prototype"/>
+  <bean id="consumer" class="c04.Consumer"
+        scope="prototype">
+    <constructor-arg name="producer" ref="producer"/>
+  </bean>
+  <bean id="producerBean" class="java.lang.Boolean">
+    <constructor-arg name="s" value="true"/>
+  </bean>
+  <bean id="consumerBean" class="java.lang.Boolean">
+    <constructor-arg name="s" value="true"/>
+  </bean>
+</beans>

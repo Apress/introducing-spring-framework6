@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/util
+       http://www.springframework.org/schema/util/spring-util.xsd">
+
+  <bean id="engine"
+        class="chapter03.StaticSearchEngine">
+    <constructor-arg name="documents" ref="documentList"/>
+  </bean>
+
+  <util:list id="documentList"
+             value-type="chapter03.model.Document">
+    <bean id="doc1" class="chapter03.model.Document">
+      <constructor-arg
+          name="name"
+          value="Book Template.pdf"/>
+      <constructor-arg
+          name="type"
+          value="PDF"/>
+      <constructor-arg
+          name="location"
+          value="/Docs/Template.pdf"/>
+    </bean>
+    <bean id="doc2" class="chapter03.model.Document">
+      <constructor-arg
+          name="name"
+          value="Apress Home Page"/>
+      <constructor-arg
+          name="type"
+          value="URL"/>
+      <constructor-arg
+          name="location"
+          value="https://apress.com"/>
+    </bean>
+    <bean id="doc3" class="chapter03.model.Document">
+      <constructor-arg
+          name="name"
+          value="Chapter Template.doc"/>
+      <constructor-arg
+          name="type"
+          value="DOC"/>
+      <constructor-arg
+          name="location"
+          value="/Docs/Chapter Sample.doc"/>
+    </bean>
+    <bean id="doc4" class="chapter03.model.Document">
+      <constructor-arg
+          name="name"
+          value="Chapter 01.docx"/>
+      <constructor-arg
+          name="type"
+          value="DOCX"/>
+      <constructor-arg
+          name="location"
+          value="/Docs/Chapter 01.docx"/>
+    </bean>
+  </util:list>
+</beans>

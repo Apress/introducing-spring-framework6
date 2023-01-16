@@ -1,0 +1,10 @@
+dependencies {
+    implementation \
+    "org.springframework:spring-core:$springFrameworkVersion"
+    implementation \
+    "org.springframework:spring-context:$springFrameworkVersion"
+    implementation \
+    "org.springframework:spring-test:$springFrameworkVersion"
+    implementation \
+    "org.codehaus.groovy:groovy-all:3.0.12"
+}

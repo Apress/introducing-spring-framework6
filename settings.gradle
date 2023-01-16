@@ -1,0 +1,36 @@
+//tag::chapter01[]
+pluginManagement {
+    repositories {
+        maven {
+            url "https://repo.spring.io/milestone"
+        }
+        maven {
+            url "https://repo.spring.io/snapshot"
+            mavenContent {
+                snapshotsOnly()
+            }
+        }
+        gradlePluginPortal()
+    }
+}
+
+rootProject.name = 'isf6'
+include 'chapter01-hello-world'
+//end::chapter01[]
+//tag::chapter01-boot[]
+include 'chapter01-hello-boot'
+//end::chapter01-boot[]
+//tag::chapter01-kotlin[]
+include 'chapter01-hello-kotlin'
+//end::chapter01-kotlin[]
+include 'chapter02'
+include 'chapter03'
+include 'chapter04'
+include 'chapter05'
+include 'chapter06'
+include 'chapter07'
+include 'chapter08'
+include 'chapter09'
+include 'chapter10'
+include 'chapter11'
+include 'chapter12'

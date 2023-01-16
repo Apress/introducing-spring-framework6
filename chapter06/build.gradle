@@ -1,0 +1,12 @@
+dependencies {
+    implementation  \
+     "org.springframework:spring-core:$springFrameworkVersion"
+    implementation  \
+     "org.springframework:spring-context:$springFrameworkVersion"
+    implementation  \
+     "org.springframework:spring-test:$springFrameworkVersion"
+    implementation  \
+     "org.springframework:spring-jdbc:$springFrameworkVersion"
+    implementation  \
+     "com.h2database:h2:2.1.214"
+}

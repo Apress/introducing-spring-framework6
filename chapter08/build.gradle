@@ -1,0 +1,25 @@
+plugins {
+    id "application"
+    id 'org.springframework.boot' version '3.0.0-M3'
+    id 'io.spring.dependency-management' version '1.0.13.RELEASE'
+}
+
+dependencies {
+    implementation \
+    'org.springframework.boot:spring-boot-starter-web'
+    implementation \
+     'org.springframework.boot:spring-boot-starter-thymeleaf'
+    implementation \
+     'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation \
+     'com.h2database:h2:2.1.214'
+    testImplementation \
+      "org.springframework.boot:spring-boot-starter-test"
+    testImplementation \
+      "org.testng:testng:$testNgVersion"
+
+}
+
+application {
+    mainClass.set("c08.Chapter8")
+}

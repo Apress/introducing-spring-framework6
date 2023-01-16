@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:lang="http://www.springframework.org/schema/lang"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/lang
+       http://www.springframework.org/schema/lang/spring-lang.xsd">
+
+  <lang:groovy name="c.g.message"
+               script-source="classpath:/scripts/cgmessage.groovy">
+    <lang:property name="message" ref="message"/>
+  </lang:groovy>
+
+  <bean name="message" class="java.lang.String">
+    <constructor-arg value="hi there" />
+  </bean>
+</beans>

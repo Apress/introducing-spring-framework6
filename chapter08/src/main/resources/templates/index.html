@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:with="lang=${#locale.language}"
+      th:lang="${lang}">
+<head>
+    <title th:text="#{title}">My Documents</title>
+</head>
+<body>
+    <a href="/search/all">
+        <span th:text="#{title}">My Documents</span> -
+        <span th:text="#{titles.search}">Search</span>
+    </a>
+</body>
+</html>

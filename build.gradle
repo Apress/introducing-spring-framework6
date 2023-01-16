@@ -1,0 +1,37 @@
+apply plugin: 'java'
+
+sourceCompatibility = 17
+targetCompatibility = 17
+
+ext {
+    springFrameworkVersion = "6.0.0-M4"
+    testNgVersion = "7.6.1"
+}
+
+allprojects {
+    apply plugin: 'java'
+
+    repositories {
+        maven {
+            url "https://repo.spring.io/milestone"
+        }
+        maven {
+            url "https://repo.spring.io/snapshot"
+            mavenContent {
+                snapshotsOnly()
+            }
+        }
+        mavenCentral()
+    }
+
+    dependencies {
+        implementation \
+        "ch.qos.logback:logback-classic:1.2.11"
+        testImplementation \
+        "org.testng:testng:$testNgVersion"
+    }
+
+    test {
+        useTestNG()
+    }
+}

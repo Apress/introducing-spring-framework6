@@ -1,0 +1,15 @@
+plugins {
+    id "application"
+}
+dependencies {
+    implementation \
+    "org.springframework:spring-core:$springFrameworkVersion"
+    implementation \
+    "org.springframework:spring-context:$springFrameworkVersion"
+    implementation \
+    "org.springframework:spring-test:$springFrameworkVersion"
+}
+
+application {
+    mainClass.set("chapter01.Application")
+}
